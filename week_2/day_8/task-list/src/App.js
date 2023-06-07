@@ -62,12 +62,12 @@ function App() {
     const taskToToggle = tasks.find((task) => task.id === taskId);
     taskToToggle.complete = !taskToToggle.complete;
 
-    const task = await TaskService.updateTask(taskToToggle);
+    const updatedTask = await TaskService.updateTask(taskToToggle);
 
     // update the tasks state with the new updated state
     setTasks(
       tasks.map((task) => {
-        return task.id === taskId ? taskToToggle : task;
+        return task.id === taskId ? updatedTask : task;
       })
     );
   }

@@ -1,4 +1,11 @@
-import { collection, query, getDocs, addDoc } from 'firebase/firestore';
+import {
+  collection,
+  query,
+  getDocs,
+  addDoc,
+  doc,
+  deleteDoc,
+} from 'firebase/firestore';
 
 import { db } from '../firebase/firebase';
 import { Movie } from '../models/Movie';
@@ -27,6 +34,11 @@ class MoviesService {
     });
 
     return movies;
+  }
+
+  async deleteMovie(movieId) {
+    const docRef = doc(db, this.collection, movieId);
+    await deleteDoc(docRef);
   }
 }
 

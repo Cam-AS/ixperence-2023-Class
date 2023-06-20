@@ -14,10 +14,6 @@ export class Movie {
 
   static fromFirebase(doc) {
     const data = doc.data();
-    return new Movie({
-      id: doc.id,
-      name: data.name,
-      downloadUrl: data.downloadUrl,
-    });
+    return new Movie(doc.id, data.name, data.downloadUrl);
   }
 }

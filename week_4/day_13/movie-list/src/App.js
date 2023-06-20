@@ -1,6 +1,7 @@
 import './App.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -36,6 +37,27 @@ import AddMoviePage from './components/AddMoviePage';
 // update file service
 // update our movie service
 // complete our AddMoviesPage
+
+// DAY 13
+
+// install bootstrap-icons
+// install react-bootstrap
+
+// add deleteMovie to MovieService
+// add deleteFile to FileService
+
+// update MoviePage
+// add Movie Grid (view)
+// update css for Movie Grid
+// add movie & movieToRemove state variables
+// add fetchMovies
+// call fetchMovies inside useEffect
+// add removeMovie function
+// add react-bootstrap Modal element
+// finish off MoviesPage
+
+// Add ImageSelector custom component
+// Add ImageSelector to our AddMoviesPage
 
 function App() {
   return (

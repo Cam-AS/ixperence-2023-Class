@@ -1,4 +1,9 @@
-import { ref, getDownloadURL, uploadBytesResumable } from 'firebase/storage';
+import {
+  ref,
+  getDownloadURL,
+  uploadBytesResumable,
+  deleteObject,
+} from 'firebase/storage';
 import { storage } from '../firebase/firebase';
 
 class FileService {
@@ -35,6 +40,13 @@ class FileService {
       const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
       onUploadProgress(progress);
     }
+  }
+
+  async deleteFile(downloadUrl) {
+    // get a reference to the file we want to remove
+    const fileRef = ref(storage, downloadUrl);
+    // remove the file using the file reference
+    await deleteObject(fileRef);
   }
 }
 

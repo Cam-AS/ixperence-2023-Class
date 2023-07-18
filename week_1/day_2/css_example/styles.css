@@ -5,6 +5,7 @@
   transition: transform 500ms ease-in;
 }
 
+/* The :hover selector is used to select elements when you mouse over them. */
 .hover-box:hover {
   transform: translateX(150px) scale(0.8) rotate(45deg);
 }
@@ -21,6 +22,7 @@
   animation-iteration-count: infinite;
 }
 
+/* The @keyframes rule specifies the animation code. */
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -58,7 +60,7 @@
     transform: translate(200px, 200px);
     background-color: green;
   }
- 
+
   75% {
     transform: translate(200px, 0px);
     background-color: red;

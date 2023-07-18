@@ -244,6 +244,34 @@ console.log(person.getPhoneType);
 // executed the function
 console.log(person.getPhoneType());
 
+// forEach
+// filter
+// map
+// reduce
+
+let mine = [
+  {
+    name: 'Cam',
+    age: 29,
+    matches: 10,
+  },
+  {
+    name: 'John',
+    age: 20,
+    matches: 11,
+  },
+];
+
+const ours = mine.map((x) => {
+  return {
+    name: x['name'],
+    age: x['age'],
+    matches: x['matches'] + 5,
+  };
+});
+
+console.log(ours);
+
 console.log('Object Keys');
 console.log(Object.keys(person));
 
@@ -379,6 +407,9 @@ function isPerfectSquare(val) {
   return Math.sqrt(val) % 1 == 0;
 }
 
+// % 1 is checking if its an integer
+// 5.2 % 1 => 0.2 ie: not integer
+
 console.log(isPerfectSquare(1));
 console.log(isPerfectSquare(2));
 console.log(isPerfectSquare(3));
@@ -388,3 +419,20 @@ for (let i = 0; i < 100; i++) {
   console.log(i);
   console.log(isPerfectSquare(i));
 }
+
+let fib = [];
+function printFibonacci(num) {
+  let num1 = 0;
+  let num2 = 1;
+  fib.push(num1);
+  fib.push(num2);
+  for (let i = 0; i < num; i++) {
+    next = num1 + num2;
+    fib.push(next);
+    num1 = num2;
+    num2 = next;
+  }
+  console.log(fib);
+}
+
+printFibonacci(10);

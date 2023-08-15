@@ -18,6 +18,7 @@ class MessageService {
   // CREATE
   async createMessage(message) {
     const docRef = doc(db, this.collection, message.id);
+    // setDoc because we're assigning the unique id
     await setDoc(docRef, message.toJson());
   }
 

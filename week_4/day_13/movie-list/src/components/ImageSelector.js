@@ -3,6 +3,7 @@ import React, { useRef, useState } from 'react';
 export default function ImageSelector({ title, onFileChange }) {
   // persists values between renders
   // can be used to store a mutable value that does not cause a re-render
+  // It can be used to access a DOM element directly.
   const inputRef = useRef(null);
   // { current: <value> }
 
@@ -19,6 +20,7 @@ export default function ImageSelector({ title, onFileChange }) {
       fileReader.onload = (res) => {
         setFileContent(res.target.result);
       };
+      // The readAsDataURL method is used to read the contents of the specified Blob or File.
       fileReader.readAsDataURL(file);
     }
 

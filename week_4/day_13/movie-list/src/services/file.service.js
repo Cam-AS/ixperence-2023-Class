@@ -24,8 +24,8 @@ class FileService {
           reject(err.message);
         },
         () => {
-          // get downLoadUrl for completed upload
           // resolve our promise
+          // get downLoadUrl for completed upload
           getDownloadURL(uploadTask.snapshot.ref).then((downloadUrl) => {
             // resolve the download url
             resolve(downloadUrl);

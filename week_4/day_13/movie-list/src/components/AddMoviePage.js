@@ -30,13 +30,13 @@ export default function AddMoviePage() {
     }
   }
 
-  function onFileSelected(e) {
-    if (e.target.files.length) {
-      setFile(e.target.files[0]);
-    } else {
-      setFile(null);
-    }
-  }
+  // function onFileSelected(e) {
+  //   if (e.target.files.length) {
+  //     setFile(e.target.files[0]);
+  //   } else {
+  //     setFile(null);
+  //   }
+  // }
 
   return (
     <div className="container mt-4">

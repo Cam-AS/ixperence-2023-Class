@@ -13,6 +13,8 @@ import AddMoviePage from './components/AddMoviePage';
 // install bootstrap
 // install react-router-dom
 // install firebase
+// install bootstrap-icons
+// install react-bootstrap
 
 // create components folder
 // create firebase folder
@@ -37,11 +39,6 @@ import AddMoviePage from './components/AddMoviePage';
 // update file service
 // update our movie service
 // complete our AddMoviesPage
-
-// DAY 13
-
-// install bootstrap-icons
-// install react-bootstrap
 
 // add deleteMovie to MovieService
 // add deleteFile to FileService
